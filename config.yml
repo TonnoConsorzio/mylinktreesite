@@ -32,7 +32,6 @@ colors:
   sectionText: "#ffffff"
   bio: "#ffffff"
 
-  # Link, icone e hover
   linkBackground: "transparent"
   linkText: "#1a73e8"
   linkBorder: "#ffffff"
@@ -43,14 +42,14 @@ colors:
 
 socials:
   - name: "Instagram"
-    url: "https://instagram.com"
+    url: "https://instagram.com/alessio.bellan"
     icon: "fa-brands fa-instagram"
   - name: "LinkedIn"
-    url: "https://www.linkedin.com/in/lucasnevespereira/"
+    url: "https://www.linkedin.com/in/alessiobellan/"
     icon: "fa-brands fa-linkedin-in"
-  - name: "Twitter/X"
-    url: "https://twitter.com/lucaasnp_"
-    icon: "fa-brands fa-x-twitter"
+  - name: "Telegram"
+    url: "https://t.me/Alessiobellan"
+    icon: "fa-brands fa-telegram"
 
 links:
   - name: "Github"

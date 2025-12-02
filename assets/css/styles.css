@@ -35,7 +35,6 @@ html {
 
 body {
   max-width: var(--max-width);
-  min-height: 100dvh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -91,7 +90,6 @@ body {
 /* Main Content Styles */
 main {
   width: 100%;
-  flex: 1;
   background: var(--main-bg, var(--background-color, #fff));
   border: 1px solid var(--section-border, transparent);
   border-radius: 22px;
