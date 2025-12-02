@@ -56,41 +56,43 @@
     <meta name="language" content="{{.Config.Meta.Lang}}" />
   </head>
   <body>
-    <header class="hero">
-      <div class="hero__image" style="background-image: url('{{.Config.Picture}}');"></div>
-      <div class="hero__overlay"></div>
-    </header>
-    <div class="hidden-card" aria-hidden="true"></div>
-    <main>
-      <section class="profile-card">
-        <h1>{{.Config.Name}}</h1>
-        <p class="bio">{{.Config.Bio}}</p>
-      </section>
-      {{if .Config.Socials}}
-      <section class="social-row">
-        {{range .Config.Socials}}
-        <a class="social-pill" href="{{.URL}}" target="_blank" rel="noopener noreferrer" title="{{.Name}}">
-          <i class="{{.Icon}}" aria-hidden="true"></i>
-        </a>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__image" style="background-image: url('{{.Config.Picture}}');"></div>
+        <div class="hero__overlay"></div>
+      </header>
+      <div class="hidden-card" aria-hidden="true"></div>
+      <main>
+        <section class="profile-card">
+          <h1>{{.Config.Name}}</h1>
+          <p class="bio">{{.Config.Bio}}</p>
+        </section>
+        {{if .Config.Socials}}
+        <section class="social-row">
+          {{range .Config.Socials}}
+          <a class="social-pill" href="{{.URL}}" target="_blank" rel="noopener noreferrer" title="{{.Name}}">
+            <i class="{{.Icon}}" aria-hidden="true"></i>
+          </a>
+          {{end}}
+        </section>
         {{end}}
-      </section>
-      {{end}}
-      <section class="links">
-        {{range .Config.Links}}
-        <a
-          class="link-item"
-          href="{{.URL}}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>{{.Name}}</p>
-        </a>
-        {{end}}
-      </section>
-    </main>
-    <footer>
-      <small>© <span class="year"></span> {{.Config.Meta.Author}} </small>
-    </footer>
+        <section class="links">
+          {{range .Config.Links}}
+          <a
+            class="link-item"
+            href="{{.URL}}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>{{.Name}}</p>
+          </a>
+          {{end}}
+        </section>
+      </main>
+      <footer>
+        <small>© <span class="year"></span> {{.Config.Meta.Author}} </small>
+      </footer>
+    </div>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
