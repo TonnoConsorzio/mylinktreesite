@@ -41,6 +41,8 @@ type Colors struct {
 	LinkBackground string `yaml:"linkBackground"`
 	LinkText       string `yaml:"linkText"`
 	LinkBorder     string `yaml:"linkBorder"`
+	SocialIcon     string `yaml:"socialIcon"`
+	ButtonText     string `yaml:"buttonText"`
 	Bio            string `yaml:"bio"`
 	HoverBackground string `yaml:"hoverBackground"`
 	HoverText       string `yaml:"hoverText"`

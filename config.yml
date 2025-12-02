@@ -19,7 +19,7 @@ meta:
 # Tavolozza (dove agiscono i colori)
 colors:
   # Sfondo globale (body)
-  background: "transparent"
+  background: "#ffffff"
   backgroundGradient: "linear-gradient(0deg, #e18f22 65%, #f8c823 100%)"
   text: "#1f1f2e"
 
@@ -28,15 +28,17 @@ colors:
 
   # Card principale (nome/bio e contenuto)
   mainBackground: "transparent"
-  sectionBorder: "#e2e2e2"
-  sectionText: "#1f1f2e"
-  bio: "#555b6c"
+  sectionBorder: "#ffffff"
+  sectionText: "#ffffff"
+  bio: "#ffffff"
 
-  # Link e hover
-  linkBackground: "#ffffff"
+  # Link, icone e hover
+  linkBackground: "transparent"
   linkText: "#1a73e8"
-  linkBorder: "#1a73e8"
-  hoverBackground: "#e18f22"
+  linkBorder: "#ffffff"
+  socialIcon: "#ffffff"
+  buttonText: "#ffffff"
+  hoverBackground: "#F2A441"
   hoverText: "#ffffff"
 
 socials:
