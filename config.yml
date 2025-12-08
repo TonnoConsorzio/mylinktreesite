@@ -43,17 +43,21 @@ colors:
 
 socials:
   - name: "Instagram"
-    url: "https://instagram.com/alessio.bellan"
+    url: "https://www.instagram.com/__._ryme_.__/"
     icon: "fa-brands fa-instagram"
   - name: "LinkedIn"
-    url: "https://www.linkedin.com/in/alessiobellan/"
+    url: "https://www.linkedin.com/in/alessiobuso/"
     icon: "fa-brands fa-linkedin-in"
-  - name: "Mail"
-    url: "mailto:alessio04.buso@gmail.com"
-    icon: "fa-solid fa-envelope"
 
 # Colori per singolo bottone (se i campi non sono presenti usa i default sopra)
 links:
+  - name: "alessio04.buso@gmail.com"
+    url: "mailto:alessio04.buso@gmail.com"
+    background: "#cc7cf7"
+    text: "#1a73e8"
+    border: "#1a73e8"
+    hoverBackground: "#cc7cf7"
+    hoverText: "#ffffff" 
   - name: "Digital Heroes"
     url: "https://www.digital-heroes.me"
     background: "#cc7cf7"
