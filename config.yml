@@ -43,14 +43,14 @@ colors:
 
 socials:
   - name: "Instagram"
-    url: "https://instagram.com"
+    url: "https://instagram.com/alessio.bellan"
     icon: "fa-brands fa-instagram"
   - name: "LinkedIn"
-    url: "https://www.linkedin.com/in/lucasnevespereira/"
+    url: "https://www.linkedin.com/in/alessiobellan/"
     icon: "fa-brands fa-linkedin-in"
-  - name: "Twitter/X"
-    url: "https://twitter.com/lucaasnp_"
-    icon: "fa-brands fa-x-twitter"
+  - name: "Telegram"
+    url: "https://t.me/Alessiobellan"
+    icon: "fa-brands fa-telegram"
 
 # Colori per singolo bottone (se i campi non sono presenti usa i default sopra)
 links:
