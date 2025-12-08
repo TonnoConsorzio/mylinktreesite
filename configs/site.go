@@ -13,7 +13,10 @@ type SiteConfig struct {
 	Picture string `yaml:"picture"`
 	Logo    string `yaml:"logo"`
 	Font    string `yaml:"font"`
+	FontName string `yaml:"fontName"`
+	FontWeights string `yaml:"fontWeights"`
 	FontURL string `yaml:"fontUrl"`
+	HeroScale string `yaml:"heroScale"`
 	Meta    Meta   `yaml:"meta"`
 	Links   []Link `yaml:"links"`
 	Colors  Colors `yaml:"colors"`
@@ -32,6 +35,11 @@ type Meta struct {
 type Link struct {
 	Name string `yaml:"name"`
 	URL  string `yaml:"url"`
+	Background string `yaml:"background"`
+	Text       string `yaml:"text"`
+	Border     string `yaml:"border"`
+	HoverBackground string `yaml:"hoverBackground"`
+	HoverText string `yaml:"hoverText"`
 }
 
 type Colors struct {

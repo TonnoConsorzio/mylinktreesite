@@ -6,7 +6,11 @@ bio: "Project Manager | Junior System Administrator | Videogames Marketing"
 
 # Font
 font: "'Stack Sans Notch', sans-serif"
-fontUrl: "https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap"
+fontName: "Stack Sans Notch"       # nome su Google Fonts (usa spazi normali)
+fontWeights: "200;300;400;500;600;700" # pesi da caricare
+fontUrl: ""                        # opzionale: se vuoto verrà generato da fontName/fontWeights
+# Scala il logo/picture (1 = default, 1.2 più grande, 0.8 più piccolo)
+heroScale: 1.2
 
 # Metadati pagina
 meta:
@@ -18,7 +22,7 @@ meta:
 
 # Tavolozza (dove agiscono i colori)
 colors:
-  # Sfondo globale (body)
+  # Sfondo globale (body)s
   background: "#ffffff"
   backgroundGradient: "linear-gradient(0deg, #e18f22 65%, #f8c823 100%)"
   text: "#1f1f2e"
@@ -54,7 +58,16 @@ socials:
 links:
   - name: "Github"
     url: "https://github.com/alessiobellan"
+    # Colori opzionali (se omessi usa i default)
+  #  background: "#ffffff"
+  #  text: "#1a73e8"
+  #  border: "#1a73e8"
+  #  hoverBackground: "#1a73e8"
+  #  hoverText: "#ffffff"
   - name: "Digital Heroes"
     url: "https://www.digital-heroes.me"
+  # Esempio email: usa mailto:
+  # - name: "Email"
+  #   url: "mailto:tuo@email.com"
 
 theme: "custom"

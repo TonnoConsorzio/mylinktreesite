@@ -41,6 +41,7 @@ body {
   background: var(--background-gradient, var(--background-color, #ffffff));
   color: var(--text-color, #1f1f2e);
   padding: 12px 12px 24px;
+  font-family: var(--font-family, 'Inter', sans-serif);
 }
 
 .page {
@@ -65,7 +66,7 @@ body {
   position: absolute;
   inset: 0;
   background-image: var(--header-image);
-  background-size: clamp(110px, 34vw, 190px);
+  background-size: clamp(calc(110px * var(--hero-scale, 1)), calc(34vw * var(--hero-scale, 1)), calc(190px * var(--hero-scale, 1)));
   background-position: center 50%;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -170,17 +171,17 @@ main {
   display: block;
   padding: 16px 20px;
   text-decoration: none;
-  color: var(--button-text, var(--link-text));
-  background: var(--link-bg);
+  color: var(--link-text-custom, var(--button-text, var(--link-text)));
+  background: var(--link-bg-custom, var(--link-bg));
   border-radius: 14px;
-  border: 1px solid var(--link-border, var(--section-border, transparent));
+  border: 1px solid var(--link-border-custom, var(--link-border, var(--section-border, transparent)));
   transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99), border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99), transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99), background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99), color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
 }
 
 .link-item:hover,
 .link-item:focus {
-  background-color: var(--hover-bg);
-  color: var(--hover-text);
+  background-color: var(--link-hover-bg-custom, var(--hover-bg));
+  color: var(--link-hover-text-custom, var(--hover-text));
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }

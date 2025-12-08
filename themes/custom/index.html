@@ -8,11 +8,11 @@
     <meta name="author" content="{{.Config.Meta.Author}}" />
     <link rel="canonical" href="{{.Config.Meta.SiteURL}}" />
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
-    <link rel="shortcut icon" href="assets/icons/favicon.ico" />
-    {{- if .Config.FontURL }}
+      <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+    {{- if .FontURL }}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="{{.Config.FontURL}}" />
+    <link rel="stylesheet" href="{{.FontURL}}" />
     {{- else }}
     <link
       rel="stylesheet"
@@ -42,6 +42,7 @@
         {{- with .Config.Colors.Bio }}--bio-color: {{.}};{{- end}}
         {{- with .Config.Colors.HoverBackground }}--hover-bg: {{.}};{{- end}}
         {{- with .Config.Colors.HoverText }}--hover-text: {{.}};{{- end}}
+        {{- with .Config.HeroScale }}--hero-scale: {{.}};{{- end}}
         {{- with .Config.Picture }}--header-image: url('{{.}}');{{- end}}
       }
     </style>
@@ -56,6 +57,7 @@
     <meta name="language" content="{{.Config.Meta.Lang}}" />
   </head>
   <body>
+    <!-- Developed by Alessio Bellan -->
     <div class="page">
       <header class="hero">
         <div class="hero__image" style="background-image: url('{{.Config.Picture}}');"></div>
@@ -78,11 +80,18 @@
         {{end}}
         <section class="links">
           {{range .Config.Links}}
+          {{- $style := "" -}}
+          {{- if .Background }}{{ $style = printf "%s--link-bg-custom:%s;" $style .Background }}{{ end -}}
+          {{- if .Text }}{{ $style = printf "%s--link-text-custom:%s;" $style .Text }}{{ end -}}
+          {{- if .Border }}{{ $style = printf "%s--link-border-custom:%s;" $style .Border }}{{ end -}}
+          {{- if .HoverBackground }}{{ $style = printf "%s--link-hover-bg-custom:%s;" $style .HoverBackground }}{{ end -}}
+          {{- if .HoverText }}{{ $style = printf "%s--link-hover-text-custom:%s;" $style .HoverText }}{{ end -}}
           <a
             class="link-item"
             href="{{.URL}}"
             target="_blank"
             rel="noopener noreferrer"
+            style="{{$style}}"
           >
             <p>{{.Name}}</p>
           </a>
@@ -90,7 +99,7 @@
         </section>
       </main>
       <footer>
-        <small>© <span class="year"></span> {{.Config.Meta.Author}} </small>
+        <small>Developed by Alessio Bellan</small>
       </footer>
     </div>
     <script src="assets/js/script.js"></script>

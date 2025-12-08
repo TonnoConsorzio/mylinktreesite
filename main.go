@@ -8,6 +8,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"gopagelink/configs"
 )
@@ -49,15 +50,28 @@ func generateHTML(config *configs.SiteConfig) error {
 	type TemplateData struct {
 		Config             *configs.SiteConfig
 		BackgroundGradient template.CSS
+		FontURL            string
 	}
 
 	var bgGrad template.CSS
 	if config.Colors.BackgroundGradient != "" {
 		bgGrad = template.CSS(config.Colors.BackgroundGradient)
 	}
+
+	fontURL := config.FontURL
+	if fontURL == "" && config.FontName != "" {
+		weights := config.FontWeights
+		if weights == "" {
+			weights = "400;700"
+		}
+		family := strings.ReplaceAll(config.FontName, " ", "+")
+		fontURL = fmt.Sprintf("https://fonts.googleapis.com/css2?family=%s:wght@%s&display=swap", family, weights)
+	}
+
 	data := TemplateData{
 		Config:             config,
 		BackgroundGradient: bgGrad,
+		FontURL:            fontURL,
 	}
 
 	return tmpl.Execute(outputFile, data)
