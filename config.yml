@@ -4,13 +4,9 @@ picture: "assets/images/profile.png"   # immagine grande per l'header/card
 logo: ""                                 # opzionale: se vuoto non viene usato
 bio: "Project Manager | Junior System Administrator | Videogames Marketing"
 
-# Font
-font: "'Stack Sans Notch', sans-serif"
-fontName: "Stack Sans Notch"       # nome su Google Fonts (usa spazi normali)
-fontWeights: "200;300;400;500;600;700" # pesi da caricare
-fontUrl: ""                        # opzionale: se vuoto verrà generato da fontName/fontWeights
-# Scala il logo/picture (1 = default, 1.2 più grande, 0.8 più piccolo)
-heroScale: 1.2
+# Font locali: indica i percorsi dei file (copiati in assets/fonts/)
+fontTitleFile: "assets/fonts/font_title.woff2"
+fontBodyFile: "assets/fonts/font_body.woff2"
 
 # Metadati pagina
 meta:
@@ -22,7 +18,7 @@ meta:
 
 # Tavolozza (dove agiscono i colori)
 colors:
-  # Sfondo globale (body)s
+  # Sfondo globale
   background: "#ffffff"
   backgroundGradient: "linear-gradient(0deg, #e18f22 65%, #f8c823 100%)"
   text: "#1f1f2e"
@@ -30,44 +26,53 @@ colors:
   # Header/picture
   heroBackground: "transparent"
 
-  # Card principale (nome/bio e contenuto)
-  mainBackground: "transparent"
+  # Card principale (nome/bio)
+  mainBackground: "#transparent"
   sectionBorder: "#ffffff"
   sectionText: "#ffffff"
   bio: "#ffffff"
 
-  linkBackground: "transparent"
-  linkText: "#1a73e8"
+  # Link, icone, hover (default per tutti i bottoni se non sovrascritti)
+  linkBackground: "#transparent"
+  linkText: "#ffffff"
   linkBorder: "#ffffff"
   socialIcon: "#ffffff"
   buttonText: "#ffffff"
-  hoverBackground: "#F2A441"
+  hoverBackground: "#e18f22"
   hoverText: "#ffffff"
 
 socials:
   - name: "Instagram"
-    url: "https://instagram.com/alessio.bellan"
+    url: "https://instagram.com"
     icon: "fa-brands fa-instagram"
   - name: "LinkedIn"
-    url: "https://www.linkedin.com/in/alessiobellan/"
+    url: "https://www.linkedin.com/in/lucasnevespereira/"
     icon: "fa-brands fa-linkedin-in"
-  - name: "Telegram"
-    url: "https://t.me/Alessiobellan"
-    icon: "fa-brands fa-telegram"
+  - name: "Twitter/X"
+    url: "https://twitter.com/lucaasnp_"
+    icon: "fa-brands fa-x-twitter"
 
+# Colori per singolo bottone (se i campi non sono presenti usa i default sopra)
 links:
   - name: "Github"
     url: "https://github.com/alessiobellan"
-    # Colori opzionali (se omessi usa i default)
-  #  background: "#ffffff"
-  #  text: "#1a73e8"
-  #  border: "#1a73e8"
-  #  hoverBackground: "#1a73e8"
-  #  hoverText: "#ffffff"
+    background: "#ffffff"
+    text: "#1a73e8"
+    border: "#1a73e8"
+    hoverBackground: "#1a73e8"
+    hoverText: "#ffffff"
   - name: "Digital Heroes"
     url: "https://www.digital-heroes.me"
-  # Esempio email: usa mailto:
-  # - name: "Email"
-  #   url: "mailto:tuo@email.com"
+  - name: "Email"
+    url: "mailto:alessiobellan@digital-heroes.me"
+    background: "#f8c823"
+    text: "#1f1f2e"
+    border: "#f8c823"
+    hoverBackground: "#e18f22"
+    hoverText: "#ffffff"
 
+# Scala immagine header (1 = default)
+heroScale: 1.2
+
+# Tema
 theme: "custom"

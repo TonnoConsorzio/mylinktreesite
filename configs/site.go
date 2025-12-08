@@ -12,10 +12,8 @@ type SiteConfig struct {
 	Bio     string `yaml:"bio"`
 	Picture string `yaml:"picture"`
 	Logo    string `yaml:"logo"`
-	Font    string `yaml:"font"`
-	FontName string `yaml:"fontName"`
-	FontWeights string `yaml:"fontWeights"`
-	FontURL string `yaml:"fontUrl"`
+	FontTitleFile string `yaml:"fontTitleFile"`
+	FontBodyFile string `yaml:"fontBodyFile"`
 	HeroScale string `yaml:"heroScale"`
 	Meta    Meta   `yaml:"meta"`
 	Links   []Link `yaml:"links"`

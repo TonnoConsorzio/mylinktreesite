@@ -8,7 +8,6 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"strings"
 
 	"gopagelink/configs"
 )
@@ -50,7 +49,6 @@ func generateHTML(config *configs.SiteConfig) error {
 	type TemplateData struct {
 		Config             *configs.SiteConfig
 		BackgroundGradient template.CSS
-		FontURL            string
 	}
 
 	var bgGrad template.CSS
@@ -58,20 +56,9 @@ func generateHTML(config *configs.SiteConfig) error {
 		bgGrad = template.CSS(config.Colors.BackgroundGradient)
 	}
 
-	fontURL := config.FontURL
-	if fontURL == "" && config.FontName != "" {
-		weights := config.FontWeights
-		if weights == "" {
-			weights = "400;700"
-		}
-		family := strings.ReplaceAll(config.FontName, " ", "+")
-		fontURL = fmt.Sprintf("https://fonts.googleapis.com/css2?family=%s:wght@%s&display=swap", family, weights)
-	}
-
 	data := TemplateData{
 		Config:             config,
 		BackgroundGradient: bgGrad,
-		FontURL:            fontURL,
 	}
 
 	return tmpl.Execute(outputFile, data)
@@ -89,6 +76,9 @@ func copyAssets(theme string) error {
 	}
 	if err := os.MkdirAll("assets/images", os.ModePerm); err != nil {
 		return fmt.Errorf("failed to create assets/images directory: %w", err)
+	}
+	if err := os.MkdirAll("assets/fonts", os.ModePerm); err != nil {
+		return fmt.Errorf("failed to create assets/fonts directory: %w", err)
 	}
 
 	cssFiles, err := filepath.Glob(fmt.Sprintf("themes/%s/assets/css/*.css", theme))
@@ -121,6 +111,14 @@ func copyAssets(theme string) error {
 	}
 	if err := copyFiles(imageFiles, "assets/images"); err != nil {
 		return fmt.Errorf("failed to copy image files: %w", err)
+	}
+
+	fontFiles, err := filepath.Glob(fmt.Sprintf("themes/%s/assets/fonts/*", theme))
+	if err != nil {
+		return fmt.Errorf("failed to list font files: %w", err)
+	}
+	if err := copyFiles(fontFiles, "assets/fonts"); err != nil {
+		return fmt.Errorf("failed to copy font files: %w", err)
 	}
 
 	return nil
