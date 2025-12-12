@@ -109,12 +109,12 @@ body {
 }
 
 .hero {
-  height: auto !important;      /* lascia crescere il contenitore */
-  min-height: 300px;            /* minimo per desktop */
-  overflow: visible !important; /* non tagliare l'immagine */
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
+  min-height: 300px;
+  overflow: visible;
   padding: 20px 0;
 }
 
@@ -321,7 +321,18 @@ body {
 }
 
 .hero__image {
-  width: auto !important;       /* usa larghezza naturale dell'immagine */
-  max-width: 80%;               /* non troppo grande su schermi grandi */
-  height: auto !important;      /* mantiene proporzioni */
+  width: auto;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transform: none !important;
+}
+
+@media (max-width: 960px) {
+  .hero__image { max-width: 200px; }
+}
+
+@media (max-width: 560px) {
+  .hero__image { max-width: 150px; }
 }
