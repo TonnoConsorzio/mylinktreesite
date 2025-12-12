@@ -318,14 +318,6 @@ body {
   background-position: center;
 }
 
-/* Tablet */
-@media (max-width: 960px) {
-  .hero__image {
-    width: 200px;
-    height: 200px;
-  }
-}
-
 /* Mobile */
 @media (max-width: 560px) {
   .hero__image {
