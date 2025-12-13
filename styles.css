@@ -108,6 +108,16 @@ body {
   object-fit: cover;
 }
 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 300px;
+  overflow: visible;
+  padding: 20px 0;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -149,8 +159,8 @@ body {
 }
 
 .cover .avatar {
-  width: 90px;
-  height: 90px;
+  width: 130px; /* dimensione desktop */
+  height: 130px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid rgba(255, 255, 255, 0.8);
@@ -308,4 +318,21 @@ body {
   .phone {
     height: 680px;
   }
+}
+
+.hero__image {
+  width: auto;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transform: none !important;
+}
+
+@media (max-width: 960px) {
+  .hero__image { max-width: 200px; }
+}
+
+@media (max-width: 560px) {
+  .hero__image { max-width: 150px; }
 }

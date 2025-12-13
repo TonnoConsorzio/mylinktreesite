@@ -1,8 +1,8 @@
 # Dati profilo
-name: "Alessio Bellan"
-picture: "assets/images/profile.png"   # immagine grande per l'header/card
+name: "Alessio Buso"
+picture: "assets/images/LOGO_Buso.png"   # immagine grande per l'header/card
 logo: ""                                 # opzionale: se vuoto non viene usato
-bio: "Project Manager | Junior System Administrator | Videogames Marketing"
+bio: "Graphic Designer & Visual Creator"
 
 # Font locali: indica i percorsi dei file (copiati in assets/fonts/)
 fontTitleFile: "assets/fonts/font_title.woff2"
@@ -11,8 +11,8 @@ fontBodyFile: "assets/fonts/font_body.woff2"
 # Metadati pagina
 meta:
   lang: "it"
-  description: "Project Manager | Junior System Administrator | Videogames Marketing"
-  title: "Alessio Bellan"
+  description: "Graphic Designer & Visual Creator"
+  title: "Alessio Buso"
   author: "Alessio Bellan"
   siteUrl: "https://alessiobellan.github.io"
 
@@ -20,7 +20,7 @@ meta:
 colors:
   # Sfondo globale
   background: "#ffffff"
-  backgroundGradient: "linear-gradient(0deg, #e18f22 65%, #f8c823 100%)"
+  backgroundGradient: "linear-gradient(0deg, #141213 60%, #0f0d0e 100%)"
   text: "#1f1f2e"
 
   # Header/picture
@@ -28,7 +28,7 @@ colors:
 
   # Card principale (nome/bio)
   mainBackground: "#transparent"
-  sectionBorder: "#ffffff"
+  sectionBorder: "#808080"
   sectionText: "#ffffff"
   bio: "#ffffff"
 
@@ -38,36 +38,36 @@ colors:
   linkBorder: "#ffffff"
   socialIcon: "#ffffff"
   buttonText: "#ffffff"
-  hoverBackground: "#e18f22"
-  hoverText: "#ffffff"
+  hoverBackground: "#ffffff"
+  hoverText: "#161314"
 
 socials:
   - name: "Instagram"
-    url: "https://instagram.com/alessio.bellan"
+    url: "https://www.instagram.com/__._ryme_.__/"
     icon: "fa-brands fa-instagram"
   - name: "LinkedIn"
-    url: "https://www.linkedin.com/in/alessiobellan/"
+    url: "https://www.linkedin.com/in/alessiobuso/"
     icon: "fa-brands fa-linkedin-in"
-  - name: "Telegram"
-    url: "https://t.me/Alessiobellan"
-    icon: "fa-brands fa-telegram"
 
 # Colori per singolo bottone (se i campi non sono presenti usa i default sopra)
 links:
-  - name: "Github"
-    url: "https://github.com/tonnoconsorzio"
-  - name: "Email - a.bellan@digital-heroes.me"
-    url: "mailto:alessiobellan@digital-heroes.me"
-  - name: "Digital Heroes"
+  - name: "alessio04.buso@gmail.com"
+    url: "mailto:alessio04.buso@gmail.com"
+    background: "#transparent"
+    text: "#ffffff"
+    border: "#ffffff"
+    hoverBackground: "#ffffff"
+    hoverText: "#161314" 
+  - name: "𝗗𝗜𝗚𝗜𝗧𝗔𝗟 𝗛𝗘𝗥𝗢𝗘𝗦"
     url: "https://www.digital-heroes.me"
     background: "#cc7cf7"
-    text: "#3f0261"
-    border: "#cc7cf7"
-    hoverBackground: "#3f0261"
+    text: "#3e0260"
+    border: "#transparent"
+    hoverBackground: "#3e0260"
     hoverText: "#cc7cf7"
 
 # Scala immagine header (1 = default)
-heroScale: 1.2
+heroScale: 1.5
 
 # Tema
 theme: "custom"
