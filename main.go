@@ -84,6 +84,9 @@ func copyAssets(theme string) error {
 	if err := os.MkdirAll("assets/fonts", os.ModePerm); err != nil {
 		return fmt.Errorf("failed to create assets/fonts directory: %w", err)
 	}
+	if err := os.MkdirAll("assets/data", os.ModePerm); err != nil {
+		return fmt.Errorf("failed to create assets/data directory: %w", err)
+	}
 
 	cssFiles, err := filepath.Glob(fmt.Sprintf("themes/%s/assets/css/*.css", theme))
 	if err != nil {
@@ -125,11 +128,41 @@ func copyAssets(theme string) error {
 		return fmt.Errorf("failed to copy font files: %w", err)
 	}
 
+	dataFiles, err := filepath.Glob(fmt.Sprintf("themes/%s/assets/data/*", theme))
+	if err != nil {
+		return fmt.Errorf("failed to list data files: %w", err)
+	}
+	if err := copyFiles(dataFiles, "assets/data"); err != nil {
+		return fmt.Errorf("failed to copy data files: %w", err)
+	}
+
 	return nil
 }
 
 func copyFiles(files []string, outputDir string) error {
 	for _, file := range files {
+		info, err := os.Stat(file)
+		if err != nil {
+			return fmt.Errorf("failed to stat %s: %w", file, err)
+		}
+		if info.IsDir() {
+			entries, err := os.ReadDir(file)
+			if err != nil {
+				return fmt.Errorf("failed to read directory %s: %w", file, err)
+			}
+			children := make([]string, 0, len(entries))
+			for _, entry := range entries {
+				children = append(children, filepath.Join(file, entry.Name()))
+			}
+			if err := copyFiles(children, filepath.Join(outputDir, filepath.Base(file))); err != nil {
+				return err
+			}
+			continue
+		}
+
+		if err := os.MkdirAll(outputDir, os.ModePerm); err != nil {
+			return fmt.Errorf("failed to create %s: %w", outputDir, err)
+		}
 		data, err := os.ReadFile(file)
 		if err != nil {
 			return fmt.Errorf("failed to read %s: %w", file, err)
