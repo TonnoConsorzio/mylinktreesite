@@ -1,73 +1,67 @@
-# Dati profilo
-name: "Alessio Bellan"
-picture: "assets/images/profile.png"   # immagine grande per l'header/card
-logo: ""                                 # opzionale: se vuoto non viene usato
-bio: "Project Manager | Junior System Administrator | Videogames Marketing"
+# Profile
+name: "Alessio Buso"
+picture: "assets/images/LOGO_Buso.png"
+logo: ""
+bio: "Graphic Designer & Visual Creator"
 
-# Font locali: indica i percorsi dei file (copiati in assets/fonts/)
+# Local fonts copied into assets/fonts/
 fontTitleFile: "assets/fonts/font_title.woff2"
 fontBodyFile: "assets/fonts/font_body.woff2"
 
-# Metadati pagina
+# Page metadata
 meta:
   lang: "it"
-  description: "Project Manager | Junior System Administrator | Videogames Marketing"
-  title: "Alessio Bellan"
-  author: "Alessio Bellan"
-  siteUrl: "https://alessiobellan.github.io"
+  description: "Alessio Buso è un Graphic Designer & Visual Creator. Scopri i suoi progetti, Digital Heroes e ABBO, e segui il suo lavoro visivo."
+  title: "Alessio Buso | Graphic Designer & Visual Creator"
+  author: "Alessio Buso"
+  siteUrl: "https://alessiobuso.github.io/mylinktreesite/"
 
-# Tavolozza (dove agiscono i colori)
 colors:
-  # Sfondo globale
-  background: "#ffffff"
-  backgroundGradient: "linear-gradient(0deg, #e18f22 65%, #f8c823 100%)"
-  text: "#1f1f2e"
-
-  # Header/picture
-  heroBackground: "transparent"
-
-  # Card principale (nome/bio)
-  mainBackground: "#transparent"
-  sectionBorder: "#ffffff"
-  sectionText: "#ffffff"
-  bio: "#ffffff"
-
-  # Link, icone, hover (default per tutti i bottoni se non sovrascritti)
-  linkBackground: "#transparent"
-  linkText: "#ffffff"
-  linkBorder: "#ffffff"
-  socialIcon: "#ffffff"
-  buttonText: "#ffffff"
-  hoverBackground: "#e18f22"
-  hoverText: "#ffffff"
+  background: "#141213"
+  backgroundGradient: "linear-gradient(145deg, #141213 0%, #0f0d0e 55%, #1c161c 100%)"
+  text: "#f6f2f5"
+  heroBackground: "#1a1618"
+  mainBackground: "#181416"
+  sectionBorder: "rgba(255,255,255,.12)"
+  sectionText: "#f6f2f5"
+  bio: "#bcb2b9"
+  linkBackground: "transparent"
+  linkText: "#f6f2f5"
+  linkBorder: "rgba(255,255,255,.25)"
+  socialIcon: "#f6f2f5"
+  buttonText: "#f6f2f5"
+  hoverBackground: "#f6f2f5"
+  hoverText: "#161314"
 
 socials:
   - name: "Instagram"
-    url: "https://instagram.com/alessio.bellan"
-    icon: "fa-brands fa-instagram"
+    url: "https://www.instagram.com/buso_design/"
+    icon: "instagram"
   - name: "LinkedIn"
-    url: "https://www.linkedin.com/in/alessiobellan/"
-    icon: "fa-brands fa-linkedin-in"
-  - name: "Telegram"
-    url: "https://t.me/Alessiobellan"
-    icon: "fa-brands fa-telegram"
+    url: "https://www.linkedin.com/in/alessiobuso/"
+    icon: "linkedin"
 
-# Colori per singolo bottone (se i campi non sono presenti usa i default sopra)
 links:
-  - name: "Github"
-    url: "https://github.com/tonnoconsorzio"
-  - name: "Email - a.bellan@digital-heroes.me"
-    url: "mailto:alessiobellan@digital-heroes.me"
+  - name: "alessio04.buso@gmail.com"
+    url: "mailto:alessio04.buso@gmail.com"
+    background: "transparent"
+    text: "#f6f2f5"
+    border: "rgba(255,255,255,.25)"
+    hoverBackground: "#f6f2f5"
+    hoverText: "#161314"
+
+projects:
   - name: "Digital Heroes"
     url: "https://www.digital-heroes.me"
-    background: "#cc7cf7"
-    text: "#3f0261"
-    border: "#cc7cf7"
-    hoverBackground: "#3f0261"
-    hoverText: "#cc7cf7"
+    logo: "assets/images/brand/digital-heroes.svg"
+    alt: "Logo Digital Heroes"
+    class: "project-card--heroes"
+  - name: "ABBO"
+    url: "https://www.abboaps.org/"
+    logo: "assets/images/brand/abbo.svg"
+    alt: "Logo ABBO"
+    class: "project-card--abbo"
 
-# Scala immagine header (1 = default)
-heroScale: 1.2
-
-# Tema
+instagramUrl: "https://www.instagram.com/buso_design/"
+heroScale: 1.5
 theme: "custom"
